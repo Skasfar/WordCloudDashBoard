@@ -1,0 +1,17 @@
+<div class="container"   >
+
+      
+      <!-- <aside  id="sidebar" class="sidebar"  style="background-color: #9370DB;" -->
+            <aside  id="sidebar" class="sidebar"   
+            style="background-color: #7B68EE ;color: #dda44b;"
+            *ngIf="userService.roleMatch(['EDITOR'])">
+            <ul class="sidebar-nav" id="sidebar-nav">
+                  <li routerLinkActive="active" class="nav-item"> <a class="nav-link " routerLink="/reviewer-regi-form"> <i
+                                    class="bi bi-grid"></i>
+                              <span>Dash Board</span> </a></li>
+
+            </ul>
+           
+      </aside>
+</div>
+

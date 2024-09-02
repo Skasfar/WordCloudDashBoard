@@ -1,0 +1,151 @@
+<Script src="/src/assets/js/captcha.js"></Script>
+<main class="bg">
+  <div class="container">
+    <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+           
+         
+              <div class=" wrapper">
+                <!-- <div class="pt-45 pb-2">
+                  <div class="center-logo mt-3">
+                    <img src="assets/img/Karnataka.png" alt="" id="logo" />
+                  </div>
+                  <div class="d-flex justify-content-center py-4">
+                    <a routerLink="/" class="logo d-flex align-items-center w-auto">
+                      <img src="assets/img/logo.png" alt="" />
+                    </a>
+                  </div>
+
+                  <h3 class="text-center">Login</h3>
+
+                  <span class="border-bottom"></span>
+                </div> -->
+
+                <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm"
+                class="needs-validation" novalidate>
+                  <div class="form-group ">
+                    <h2>Login</h2>
+                    <!-- <label for="username"><b>User Name</b></label> -->
+                    <div class="input-field has-validation ">
+                      <input type="text" name="username"  [(ngModel)]="form.username" 
+                        id="yourUsername" autocomplete="off" required />
+                        <label>Enter your email</label>
+                      <div class="invalid-feedback">
+                        Please enter your username.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <div class="input-field has-validation">
+                      <input type="password" name="password" [(ngModel)]="form.password" 
+                      id="yourPassword" required />
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+
+             
+                  
+                  <div id="chapaBackground">
+                    <span id="captcha" >captcha text</span>
+                  </div>
+                  <div class="row mt-2 mx-1">
+                    <div class="input-field col-md-9 ">
+                      <input type="text" name="" id="textBox" autocomplete="off"
+                         required/>
+                        <label for="password">Captcha</label>
+                    </div>
+
+                    <div class="col-md-2 mt-2">
+                      <button  id="refresh">
+                        <i class="bi bi-arrow-clockwise" ></i>
+                      </button>
+                    </div>
+                  </div>
+                  <span id="output"></span> 
+                  &nbsp;
+                 
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100" type="submit" id="submit">
+                      Login
+                    </button>
+                  </div>
+                  <div class="register">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                  </div>
+                  <!-- <div class="col-12">
+                  
+                     <h5 style="color: red; text-align: center">
+                      Version 2.0.9
+                    </h5> 
+                  </div> -->
+                </form>
+              </div>
+            
+            <!-- <div class="credits">
+              Powered by
+              <a href="https://ictinfracon.com/ICT-Infracon/main.htm?actionCode=loadFirstPage" target="_blank">{{
+                company }}</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+<!-- <main class="bg">
+  <div class="wrapper">
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+      <h2>Login</h2>
+        <div class="input-field">
+        <input type="text" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" [(ngModel)]="form.password" 
+        id="yourPassword" required />
+        <label>Enter your password</label>
+      </div>
+
+
+      <div id="chapaBackground">
+        <span id="captcha">captcha text</span>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-9 input-field">
+          <input type="text"  name="" id="textBox" autocomplete="off"
+            placeholder="Enter Captcha Text" />
+        </div>
+
+        <div class="col-md-2">
+          <button class="btn btn-primary">
+            <i class="bi bi-arrow-clockwise" id="refresh"></i>
+          </button>
+        </div>
+      </div>
+      <span id="output"></span>
+
+
+
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit" id="submit">Log In</button>
+      <div class="register">
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
+</main> -->
+
+
+
+
+

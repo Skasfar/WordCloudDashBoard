@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+.activeLink {
+  background-color: lavender;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media only screen and (max-width: 600px) {
+ 
+  /* .sidebar {
+      width: 100%;
+    } */
+  table{
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+
+      font-weight: normal;
+      font-stretch: normal;
+      font-size: 1rem;
+      line-height: 1.77;
+      font-family:"Helvetica Neue",  Roboto, sans-serif;
+      
+  }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+.sidebar {
+width: 100vw;
+  left: -500px;
+}
+}
+
+
+
+
+
+

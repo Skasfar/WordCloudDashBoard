@@ -1,0 +1,147 @@
+<header id="header" class="header fixed-top d-flex align-items-center" style="background-color:black;">
+
+  <div class="d-flex align-items-center justify-content-between">
+     <a routerLink="/dashboard" class="logo d-flex align-items-center"> 
+      <!-- <img src="assets/img/logo-black.svg" alt="" > -->
+       <span
+         class="d-none d-lg-block"></span> 
+      </a> 
+         <i (click)="sidebarToggle()" class="bi bi-list toggle-sidebar-btn" style="color: #fff;"></i></div>
+
+  <!-- <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+         
+          <li class="nav-item dropdown"><span class="form-inline">
+         
+          <li> 
+              
+                  
+                   <a class="dropdown-item d-flex align-items-center nav-item" routerLink="/pages-login"
+                   routerLinkActive="active" ><mat-icon>power_settings_new</mat-icon></a></li>
+                   </span>
+                   </li>
+       </ul>
+  
+    
+
+      </nav> -->
+
+      <nav class="header-nav w-100 "   >
+          <ul class="d-flex align-items-center">
+           
+            <li  style="margin-left:90%;">
+              <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                  <i class="bi bi-search"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header">
+                      <input type="text" class="form-control" placeholder="Search...">
+                  </li>
+              </ul>
+
+
+              
+          </li>
+               <!-- <li style="margin-left: 3%; "> <a class="" routerLink="/pages-login" routerLinkActive="active" style="color: #000; font-size: 25px;" ><i class="bi bi-power"></i> </a></li> -->
+               
+               <!-- <li style="margin-left: 71%; " > <a class="" routerLink="/pages-login" routerLinkActive="active" > <mat-icon>power_settings_new</mat-icon> </a></li> -->
+              <!-- <li class="nav-item dropdown"><span class="form-inline">
+              <li> <a class="dropdown-item d-flex align-items-center nav-item" routerLink="/pages-login"
+                    routerLinkActive="active"> <i class="bi bi-box-arrow-right"></i> <span>Sign
+                       Out</span> </a></li>
+                       </span>
+                       </li> -->
+                       <!-- <li class="nav-item dropdown">
+                         <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown"> <i class="bi bi-bell"></i> <span
+                               class="badge bg-primary badge-number">{{markAsUnreadCount}}</span> </a>
+                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                            <li class="dropdown-header"  (click)="viewAllNotifications()" > You have {{markAsUnreadCount}} notifications <span
+                               class="badge rounded-pill bg-primary p-2 ms-2">View all</span></li>
+                            <li>
+                               <hr class="dropdown-divider">
+                            </li>
+                            <li class="notification-item" *ngFor="let notification of notificationData.slice(0, 3);let i = index">
+                               <div>
+                                  <h4>{{notification.notification}}</h4>
+                               </div>
+                               <hr class="dropdown-divider">
+                            </li>
+                         </ul>
+                      </li> -->
+
+                      <li class="nav-item dropdown" style="margin-left: 1%; ">
+                        <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                            <i class="bi bi-person"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                            <li class="dropdown-header">
+                                <h6>User Name</h6>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item" routerLink="/profile">
+                                    <i class="bi bi-person"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" (click)="logout()">
+                                    <i class="bi bi-box-arrow-right"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+           </ul>
+
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': displayStyleOfModal2}">
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header p-3 mb-2 bg-gradient-light text-dark">
+      <h4 class="modal-title"><b>All Notifications</b></h4>
+      <!-- <button type="button" class="close text-primary" >
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+      <button type="button" class="btn-close" aria-label="Close" (click)="closeNotification()"></button>
+    </div>
+    <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
+      <ng-container *ngIf="allNotifications && allNotifications.length > 0">
+     
+        <div *ngFor="let msg of allNotifications; let i = index" class="message-container" [ngClass]="{'unread': msg.markAsRead !== 1}">
+          <div *ngIf="msg.markAsRead !== 1" class="unread-dot"></div>
+        
+          <div class="message-content">
+            <h3 class="text-primary">{{ msg.notification }}</h3>
+        
+            <ng-container *ngIf="msg.markAsRead !== 1">
+              <hr>
+            </ng-container>
+          </div>
+        
+          <div class="action-buttons">
+            <a class="text-right" (click)="markAsRead(msg, i)" *ngIf="msg.markAsRead !== 1">
+              <span class="btn badge rounded-pill bg-danger p-2">Mark Read</span>
+            </a>
+          </div>
+        </div>
+        
+        
+
+      </ng-container>
+      <div *ngIf="!allNotifications || allNotifications.length === 0" class="text-muted">
+        No messages available.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+          </nav>
+          
+  </header>
+  <!-- <mat-icon>power_settings_new</mat-icon> -->
+  <!-- <img src="assets/img/HeroLogo.svg" alt="" width="250px"> -->
+
+  <!-- <a class="dropdown-item d-flex align-items-center nav-item" routerLink="/pages-login"
+                routerLinkActive="active"> <i class="bi bi-box-arrow-right"></i> <span>Sign
+                   Out</span> </a> -->

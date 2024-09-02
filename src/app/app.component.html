@@ -1,0 +1,5 @@
+
+<app-header *ngIf="!( _router.url === '/pages-login' || _router.url === '/pages-error404' || _router.url === '/'   ||  _router.url === '/map-view' || _router.url === '/reviewer-regi-form'   )" ></app-header> 
+ <app-sidebar *ngIf="!( _router.url === '/pages-login' || _router.url === '/pages-error404' || _router.url === '/' || _router.url === '/map-view' || _router.url === '/reviewer-regi-form' )" ></app-sidebar> 
+<router-outlet></router-outlet>
+<app-footer *ngIf="!(_router.url === '/pages-login' || _router.url === '/pages-error404' || _router.url === '/'    || _router.url === '/map-view'|| _router.url === '/reviewer-regi-form'  )" ></app-footer>

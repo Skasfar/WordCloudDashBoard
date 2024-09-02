@@ -1,0 +1,325 @@
+/* reviewer-regi-form.component.css */
+.circular-container {
+    width: 50%; 
+    height: 50%; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgb(255, 255, 255);
+    /* background: url(/assets/img/bg.jpg); */
+    /* background-color: #ADD8E6; */
+}
+
+
+.circular-container:hover{
+  
+}
+
+.bg-img{
+  /* background: url(/assets/img/bg.jpg); */
+
+  /* background-image: radial-gradient(#474bff 2px, transparent 2px);
+background-size: 48px 48px;
+background-color: #f2f6f7; */
+
+  /* background: radial-gradient(circle farthest-side at 0% 50%,#47d3ff 23.5%,#0000 0)73.5px 105px,
+      radial-gradient(circle farthest-side at 0% 50%,#474bff 24%,#0000 0)66.5px 105px,
+      linear-gradient(#47d3ff 14%,#0000 0, #0000 85%,#47d3ff 0)0 0,
+      linear-gradient(150deg,#47d3ff 24%,#474bff 0,#474bff 26%,#0000 0,#0000 74%,#474bff 0,#474bff 76%,#47d3ff 0)0 0,
+      linear-gradient(30deg,#47d3ff 24%,#474bff 0,#474bff 26%,#0000 0,#0000 74%,#474bff 0,#474bff 76%,#47d3ff 0)0 0,
+      linear-gradient(90deg,#474bff 2%,#47d3ff 0,#47d3ff 98%,#474bff 0%)0 0 #47d3ff;; 
+  /* background: url("https://wallup.net/wp-content/uploads/2016/05/25/251395-pattern-748x421.png"); */
+/* background-color: rgb(255, 254, 254);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: Lato;
+}
+mat-form-field {
+    width: 100%;
+}
+
+
+.chart-container {
+    width: 100%; /* Adjust as needed */
+    max-width: 500px; /* Max width for the container */
+    height: 0;
+    padding-bottom: 100%; /* Makes the container a square */
+    position: relative; /* For absolute positioning of the chart */
+    overflow: hidden; /* Ensures no overflow */
+  }
+  
+  .highcharts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  ::ng-deep .highcharts-title{
+    display: none !important;
+  }
+
+
+
+
+  #infinity {
+    position: relative;
+    width: 212px;
+    height: 100px;
+    box-sizing: content-box;
+  }
+  #infinity:before,
+  #infinity:after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid red;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+  }
+  #infinity:after {
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+  }
+
+
+
+/* Change label color on focus */
+
+
+/*
+
+/* #########  S Asfar   */
+
+
+
+
+/* On focus placeholder color change */
+.custom-outline .form-control:focus::placeholder {
+  color: #4285F4;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(97, 155, 237) 50%, rgb(246, 242, 242) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:10s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+      transform:translateX(-5%);
+  }
+
+  100% {
+      transform:translateX(5%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-img {
+  position: relative; /* Ensure the parent div is positioned relatively */
+}
+
+#opt {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  background: transparent; 
+  border: 2px solid #9e9d9d;
+  border-radius: 15px;
+  padding: 10px; 
+  z-index: 10;
+  
+}
+
+#opt {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the effect */
+}
+.circular-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the effect */
+
+}
+
+
+ #opt:hover {
+  transform: scale(1.02); /* Slightly enlarge the container */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for a 3D effect */
+}
+.circular-container:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for a 3D effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+.ball {
+  margin-top: 0;
+ margin-left: 25%;
+  --s: 45%; /* control the size */
+  --c: rgb(250, 235, 140);   /* the color */
+  
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 100%;
+  display: grid;
+  overflow: hidden;
+  background: radial-gradient(at 36% 45%,#0000, 80%, #000);
+  box-shadow: calc(var(--s)/8) calc(var(--s)/8) calc(var(--s)/8) calc(var(--s)/-8) #0009;
+}
+.ball:before,
+.ball:after{
+  content: "";
+  grid-area: 1/1;
+}
+/* .ball:before {
+  background: radial-gradient(circle at top, var(--c), #000);
+  mix-blend-mode: multiply;
+  -webkit-mask: linear-gradient(#000 0 0) bottom no-repeat;
+  animation: c 7s linear infinite;
+} */
+.ball:after {
+  border-radius: 50%;
+  z-index: 1;
+  width: 0%;
+  aspect-ratio: 1;
+  margin: auto;
+  background-image: linear-gradient(var(--c) 0 0);
+  background-blend-mode: multiply;
+  animation: 
+    b 7s linear infinite,
+    a 7s cubic-bezier(0.06,1334,.93,1334) infinite;
+}
+/* @keyframes a {
+  0%,5%    {width:0%}
+  95%,100% {width: 0.1%}
+} */
+@keyframes b {
+  0%,5% {
+    transform: translateY(calc(var(--s)/2))  rotateX(78deg);
+    background-color: #333;
+  }
+  95%,100% { 
+    transform: translateY(calc(var(--s)/-2)) rotateX(78deg);
+    background-color: #ccc;
+  }
+}
+/* @keyframes c {
+  0%,5% {
+    -webkit-mask-size: 100% 0%;
+  }
+  95%,100% {
+    -webkit-mask-size: 100% 100%;
+  }
+} */
+
+/* body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  gap: 20px;
+  background: linear-gradient(#0006,#0008);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* E Asfar   */
