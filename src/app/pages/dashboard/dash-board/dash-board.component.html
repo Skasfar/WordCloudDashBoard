@@ -38,7 +38,6 @@ background-size: 500px 182px;
           <mat-icon style="margin-left: 1px; vertical-align: middle; font-size: 30px; line-height: 1; cursor: pointer; padding: 0px; color: blue;">home</mat-icon>
  <div style="margin-left:10px ; cursor: pointer;" >Dash Board </div> 
 
-       
         </mat-card-title>
 
 
@@ -99,12 +98,27 @@ background-size: 500px 182px;
 
             <div class="circular-container" style="height: 85vh; width: 45vw; background: #212121;"
             > -->
+
+
+
+            
             <div class="ball">
-              <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions[i]"
-              style="--c: lightblue;--s:160px ">
+            
+              <highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions[i]" style="--c: lightblue;--s:160px "  >
               </highcharts-chart>
+
+
+              <div class="drop-zone" >
+                <mat-icon  style="font-size: 80px; height: 100%; width: 100%; color: rgb(247, 131, 131);" >delete</mat-icon>
+                <i class="fa-solid fa-trash-can"></i>
+              </div>
+
+
             </div>
 
+
+            <!-- Drop zone for deleting words -->
+       
           </div>
 
           <!-- </div> -->

@@ -27,6 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { GoogleMapsModule } from "@angular/google-maps";
 import { MapViewComponent } from './pages/dashboard/map-view/map-view.component';
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -57,7 +58,8 @@ import { MapViewComponent } from './pages/dashboard/map-view/map-view.component'
         ReactiveFormsModule,
         CommonModule,
         MatNativeDateModule,
-        GoogleMapsModule
+        GoogleMapsModule,
+       
         
 
 

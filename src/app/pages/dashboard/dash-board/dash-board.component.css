@@ -211,21 +211,21 @@ h1 {
 }
 
 #opt {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .circular-container {
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for the effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 
 }
 
 
  #opt:hover {
-  transform: scale(1.02); /* Slightly enlarge the container */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for a 3D effect */
+  transform: scale(1.02); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 .circular-container:hover {
   transform: scale(1.02); 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for a 3D effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
 }
 
 
@@ -241,16 +241,16 @@ h1 {
 .ball {
   margin-top: 0;
  margin-left: 25%;
-  --s: 45%; /* control the size */
-  --c: rgb(250, 235, 140);   /* the color */
+  --s: 45%; 
+  --c: rgb(250, 235, 140);  
   
   width: var(--s);
   aspect-ratio: 1;
   border-radius: 100%;
   display: grid;
   overflow: hidden;
-  background: radial-gradient(at 36% 45%,#0000, 80%, #000);
-  box-shadow: calc(var(--s)/8) calc(var(--s)/8) calc(var(--s)/8) calc(var(--s)/-8) #0009;
+  background: radial-gradient(at 36% 45%,#0000, 0%, #fdfdfd);
+  box-shadow: calc(var(--s)/8) calc(var(--s)/8) calc(var(--s)/8) calc(var(--s)/-8) rgba(13, 13, 13, 0.6);
 }
 .ball:before,
 .ball:after{
@@ -280,13 +280,13 @@ h1 {
   95%,100% {width: 0.1%}
 } */
 @keyframes b {
-  0%,5% {
+  /* 0%,5% {
     transform: translateY(calc(var(--s)/2))  rotateX(78deg);
     background-color: #333;
-  }
+  } */
   95%,100% { 
     transform: translateY(calc(var(--s)/-2)) rotateX(78deg);
-    background-color: #ccc;
+    background-color: #cccccc;
   }
 }
 /* @keyframes c {
@@ -312,11 +312,21 @@ h1 {
 
 
 
+.drop-zone 
+{
 
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
 
-
-
-
+}
+.drop-zone:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, transparent, rgb(222, 71, 37) 35%, transparent);
+  color: white;
+}
 
 
 

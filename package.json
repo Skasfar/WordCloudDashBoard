@@ -25,6 +25,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@popperjs/core": "^2.11.6",
+    "angular-material-icons": "^0.7.1",
     "angular-ng-autocomplete": "^2.0.12",
     "cors": "^2.8.5",
     "crypto-js": "^4.1.1",
